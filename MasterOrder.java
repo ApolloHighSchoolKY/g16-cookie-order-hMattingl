@@ -17,7 +17,12 @@ public class MasterOrder{
   public int getTotalBoxes()
   {
     /* Part A answer goes here */
-    
+    int total = 0;
+
+    for(CookieOrder x: orders)
+      total += x.getNumBoxes();
+
+    return total;  
   }
 
   /** Removes all cookie orders from the master order that have the same variety of
@@ -28,7 +33,18 @@ public class MasterOrder{
   public int removeVariety(String cookieVar)
   {
     /* Part B answer goes here */
-    
+    int total = 0;
+
+    for(int i = orders.size()-1; i >= 0; i ++)
+    {
+      if(orders.get(i).getVariety().equals(cookieVar))
+      {
+        total += orders.get(i).getNumBoxes();
+        orders.remove(i);
+      }
+    }
+
+    return total;
   }
 
   //There may be instance variables, constructors, and methods that are not shown.

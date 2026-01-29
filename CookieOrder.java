@@ -1,5 +1,6 @@
 public class CookieOrder{
 
+
   /** Constructs a new CookieOrder object */
   public CookieOrder (String variety, int numBoxes)
   { /*implementation not shown */ }
